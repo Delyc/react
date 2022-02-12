@@ -1,19 +1,22 @@
+import {useState} from 'react';
 const Home = () => {
+    
+    const [name, setName] = useState("Delyce")
+    const [age, setAge]= useState(19)
     const handleClick = () =>{
-        console.log("Hello there!");
+        setName('Umuhire');
+        setAge(20)
+      
     }
-    const handleClickAgain= (name) =>{
-        console.log("hello" + name);
-
-    }
+  
     return (  
         <div className="home">
             <h2>Home page</h2>
+            <p>{name} is {age} years old</p>
+            
             {/* using handleClick() will invoke the function bcz of (), refresh ---- console the message */}
             <button onClick={handleClick}>Click me</button>
-            <button onClick={() =>{
-                handleClickAgain(' Delyce')
-            } }>Click ma again</button>
+          
         </div>
     ); 
 }
