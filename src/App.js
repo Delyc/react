@@ -1,6 +1,7 @@
 
 import './App.css';
-
+import Navbar from './navbar';
+import Home from './home';
 function App() {
   //dyamic value
   const link="https://www.google.com"; 
@@ -9,15 +10,9 @@ function App() {
   // const person = {name: "Delyce", age: 19 };
   return (
     <div className="App">
+      <Navbar/>
      <div className="content">
-       <h1>{title}</h1>
-       {/* <p>{person}</p> */}
-       <p>{"hey"}</p>
-       {/* bunch all elements in a string together as an array */}
-       <p>{[1, 2, 3, 5]}</p>
-      {/* displaying a random number */}
-       <p>{Math.random() *10}</p>
-       <a href={link}> Google site</a>
+       <Home />
 
 
 
